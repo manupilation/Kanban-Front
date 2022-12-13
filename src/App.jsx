@@ -1,12 +1,9 @@
 import React from "react";
-import "./App.css";
+import AppRouter from "./router/BrowseRouter";
+
 
 function App() {
-  return (
-    <div>
-      Olá!
-    </div>
-  );
+  return (<AppRouter />);
 }
 
 export default App;
