@@ -2,14 +2,16 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function TextInput(props) {
+  const { name, labelText, type, changeInput, value } = props;
+
   return (
     <div className={ props.className }>
-      <label htmlFor={ props.name }>{ props.labelText }</label>
+      <label htmlFor={ name }>{ labelText }</label>
       <input
-        type={ props.type }
-        value={ props.value }
-        name={ props.name }
-        onChange={ props.changeInput }
+        type={ type }
+        value={ value }
+        name={ name }
+        onChange={ changeInput }
       />
     </div>
   );
