@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import UserContext from "../../context/userContext";
 import DefaultButton from "../DefaultButton";
 
 function TaskHeader() {
+  const { userData } = useContext(UserContext);
+
   return(
     <header>
-      <h1>Boas vindas, Username</h1>
-
+      <h1>Boas vindas, { userData.user + "!" || "Visitante!" }</h1>
       <div>
         <DefaultButton
           type="button"
