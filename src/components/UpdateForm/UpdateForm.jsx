@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import UserContext from "../../context/userContext";
 import TextInput from "../Input";
+import styles from "./styles.module.scss";
 
 function UpdateForm() {
   const [toggle, setToggle] = useState(true);
@@ -13,6 +14,8 @@ function UpdateForm() {
   useEffect(() => {
     if(newTask.task.length > 6) {
       setToggle(false);
+    } else {
+      setToggle(true);
     }
   }, [newTask.task]);
 
@@ -129,16 +132,17 @@ function UpdateForm() {
 
   if(!updating) {
     return (
-      <form onSubmit={HandleRequestTask}>
+      <form onSubmit={HandleRequestTask} className={styles.addForm}>
         <TextInput 
           type="text"
           value={newTask.task}
           name="task"
           labelText="Nova tarefa:"
           changeInput={HandleNewTask}
+          className={styles.taskInput}
         />
   
-        <select name="status" defaultValue={"DEFAULT"} onChange={HandleNewTask}>
+        <select name="status" defaultValue={"DEFAULT"} onChange={HandleNewTask} className={styles.selectInput}>
           <option value="DEFAULT" disabled>Progresso:</option>
           <option value="pending">Pendente</option>
           <option value="in progress">Fazendo</option>
@@ -151,25 +155,28 @@ function UpdateForm() {
     );
   } else {
     return (
-      <form onSubmit={HandleUpdateRequest}>
+      <form onSubmit={HandleUpdateRequest} className={styles.updateForm}>
         <TextInput 
           type="text"
           value={updateData.task}
           name="task"
           labelText="Tarefa:"
           changeInput={HandleUpdateTask}
+          className={styles.updateInput}
         />
 
-        <select name="status" defaultValue={updateData.status} onChange={HandleUpdateTask}>
+        <select name="status" defaultValue={updateData.status} onChange={HandleUpdateTask} className={styles.updateSelect}>
           <option value="pending">Pendente</option>
           <option value="in progress">Fazendo</option>
           <option value="testing">Testando</option>
           <option value="done">Concluído</option>
         </select>
 
-        <button type="button" onClick={handleSetUpdate}>CANCELAR</button>
-        <button type="button" onClick={HandleDeleteRequest}>EXCLUIR TAREFA</button>
-        <button type="submit">ENVIAR</button>
+        <div className={styles.utilityButtons}>
+          <button type="button" onClick={HandleDeleteRequest}>EXCLUIR TAREFA</button>
+          <button type="button" onClick={handleSetUpdate}>CANCELAR</button>
+          <button type="submit">ENVIAR</button>
+        </div>
       </form>
     );
   }
