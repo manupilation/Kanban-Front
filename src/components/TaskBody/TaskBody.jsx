@@ -3,6 +3,7 @@ import UserContext from "../../context/userContext";
 import { Navigate } from "react-router-dom";
 import TaskCard from "../TaskCard/taskCard";
 import UpdateForm from "../UpdateForm/UpdateForm";
+import styles from "./styles.module.scss";
 
 function TaskBody() {
   const { userData } = useContext(UserContext);
@@ -11,12 +12,12 @@ function TaskBody() {
     return <Navigate to="/login"/>;
   } else {
     return (
-      <main>
-        <div>
+      <main className={styles.tasksContainer}>
+        <div className={styles.titleContainer}>
           <p>Lista de tarefas:</p>
         </div>
 
-        <section>
+        <section className={styles.sectionContent}>
           <UpdateForm />
           { userData.tasks?.map((t, i) => (
             <TaskCard
