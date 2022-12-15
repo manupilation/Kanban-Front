@@ -5,24 +5,22 @@ import PropTypes from "prop-types";
 function Provider({ children }) {
   const [token, setToken] = useState("");
   const [userData, setUserData] = useState({});
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
-  const [registerEmail, setRegisterEmail] = useState("");
-  const [registerPassword, setRegisterPassword] = useState("");
+  const [updateData, setUpdateData] = useState({
+    task: "",
+    status: "",
+    _id: ""
+  });
+  const [updating, setUpdating] = useState(false);
 
   const contextData = {
     token,
     userData,
-    loginEmail,
-    loginPassword,
-    registerEmail,
-    registerPassword,
+    updateData,
+    updating,
     setToken,
     setUserData,
-    setLoginEmail,
-    setLoginPassword,
-    setRegisterEmail,
-    setRegisterPassword
+    setUpdateData,
+    setUpdating,
   };
 
   return(
