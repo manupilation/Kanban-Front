@@ -1,0 +1,45 @@
+.headerContainer {
+  display: flex;
+  padding: 40px;
+  justify-content: space-between;
+  background-color: var(--c-gr);
+  justify-items: center;
+
+  h1 {
+    font-family: "Montserrat";
+    font-size: 1.6rem;
+  }
+
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    button {
+      padding: .6rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background-color: var(--c-1);
+      color: var(--c-gw);
+      font-family: "Poppins";
+      font-size: 1rem;
+      font-weight: 700;
+
+      &::before {
+        content: "";
+        height: 2px;
+        width: 14px;
+        display: inline-block;
+        background-color: var(--c-gw);
+        margin-right: 4px;
+        box-shadow: 0 4px var(--c-gw), 0 -4px var(--c-gw);
+      }
+    }
+
+    .menuList {
+      display: none;
+    }
+  }
+}
