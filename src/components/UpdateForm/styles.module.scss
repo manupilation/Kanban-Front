@@ -1,0 +1,109 @@
+.addForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  background-color: var(--c-1);
+  padding: 20px;
+  gap: 20px;
+  border-radius: 4px;
+
+  button {
+    background-color: var(--c-gr);
+    place-self: center;
+    padding: .6rem .8rem;
+    border-radius: 4px;
+    font-family: "Poppins";
+    font-weight: 500;
+    font-size: .9rem;
+  }
+
+  button:disabled {
+    background-color: var(--c-gg);
+    color: var(--c-2);
+  }
+
+  .taskInput {
+    label {
+      display: block;
+      color: var(--c-wg);
+      font-family: "Montserrat";
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    input {
+      padding: .3rem .8rem;
+      width: 70%;
+      font-size: 1rem;
+      font-family: "Montserrat";
+      border-radius: 16px;
+    }
+  }
+  .selectInput {
+    padding: .5rem 1rem;
+    font-family: "Poppins";
+    border-radius: 16px;
+  }
+}
+
+.updateForm {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 300px;
+  background-color: var(--c-1);
+  padding: 20px;
+  border-radius: 4px;
+
+  .utilityButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+
+    button {
+      padding: .4rem .6rem;
+      font-family: "Poppins";
+      font-size: .6rem;
+      font-weight: bold;
+      border-radius: 4px;
+
+      &:nth-child(1) {
+        background-color: var(--c-rd);
+        color: var(--c-0);
+      }
+      &:nth-child(2) {
+        background-color: var(--c-py);
+      }
+
+      &:nth-child(3) {
+        background-color: var(--c-gr);
+      }
+    }
+  }
+
+  .updateInput {
+    label {
+      display: block;
+      color: var(--c-wg);
+      font-family: "Montserrat";
+      font-weight: 500;
+      margin-bottom: 4px;
+    }
+
+    input {
+      padding: .3rem .8rem;
+      width: 70%;
+      font-size: 1rem;
+      font-family: "Montserrat";
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+  }
+  .updateSelect {
+    padding: .5rem 1rem;
+    font-family: "Poppins";
+    border-radius: 16px;
+    margin-bottom: 20px;
+  }
+}
