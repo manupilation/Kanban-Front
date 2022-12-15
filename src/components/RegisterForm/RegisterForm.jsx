@@ -33,7 +33,7 @@ function RegisterForm() {
       />
 
       <DefaultButton 
-        type="button"
+        type="submit"
         text="CONFIRMAR"
         className={styles.loginButton}
       />
