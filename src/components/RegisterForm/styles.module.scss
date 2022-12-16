@@ -1,0 +1,39 @@
+.registerForm {
+  display: grid;
+
+
+  h1 {
+    margin-bottom: 10px;
+    font-family: "Montserrat";
+    text-align: center;
+  }
+
+  .registerInput {
+    label {
+      display: block;
+      font-weight: 600;
+      font-family: "Poppins";
+    }
+
+    input {
+      margin-left: 20px;
+      padding: .4rem .6rem;
+      border-radius: 14px;
+      width: 60%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .loginButton {
+    padding: .6rem 1rem;
+    place-self: end;
+    margin-right: 15%;
+    border-radius: 4px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: var(--c-0);
+    background-color: var(--c-1)
+  }
+}

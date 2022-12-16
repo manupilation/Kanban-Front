@@ -1,0 +1,17 @@
+.tasksContainer {
+  background-color: var(--c-wg);
+
+  .titleContainer {
+    padding: 30px;
+    font-size: 1.2rem;
+    font-family: "Montserrat";
+    font-weight: 600;
+  }
+  
+  .sectionContent {
+    padding: 0px 0px 80px 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px 20px;
+  }
+}

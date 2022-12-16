@@ -18,8 +18,8 @@ function DefaultButton(props) {
 DefaultButton.propTypes = {
   text: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
-  clickButton: PropTypes.func.isRequired,
+  className: PropTypes.string,
+  clickButton: PropTypes.func,
 };
 
 export default DefaultButton;

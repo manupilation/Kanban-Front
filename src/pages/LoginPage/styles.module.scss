@@ -1,0 +1,61 @@
+.loginContainer {
+  max-width: 800px;
+  height: 400px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  margin-top: 100px;
+
+  .titleSection {
+    font-family: "Montserrat";
+    padding: 20px;
+    background-image: url("../../../images/tom-hermans-9BoqXzEeQqM-unsplash.jpg");
+    border-radius: 4px 0 0 4px;
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-weight: 600;
+      max-width: 20ch;
+    }
+
+    .spanDetail {
+      color: var(--c-py);
+    }
+  }
+
+  .loginSection {
+    background-color: var(--c-gr);
+
+    .registerNow {
+      display: grid;
+      grid-template-columns: 1fr;
+      text-align: center;
+      font-family: "Montserrat";
+
+      p {
+        color: var(--c-0);
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: var(--c-1);
+        cursor: pointer;
+        background-color: var(--c-pu);
+        padding: .6rem 1rem;
+        border-radius: 14px;
+        font-weight: 700;
+        width: 80%;
+        place-self: center;
+
+        &:hover {
+        background-color: #B612AB;
+        }
+      }
+    }
+  }
+}

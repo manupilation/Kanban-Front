@@ -1,0 +1,42 @@
+.formLogin {
+  display: grid;
+  padding: 20px;
+
+  h2 {
+    font-family: "Poppins";
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .formInput {
+    font-family: "Poppins";
+    font-weight: 600;
+
+    label {
+      display: block;
+    }
+
+    input {
+      padding: .4rem .6rem;
+      border-radius: 14px;
+      width: 80%;
+      margin-bottom: 20px;
+    }
+
+  }
+
+  .loginButton {
+    background-color: var(--c-1);
+    place-self: end;
+    margin-right: 15%;
+    padding: .4rem 1rem;
+    border-radius: 4px;
+    color: var(--c-0);
+    font-family: "Poppins";
+    font-size: 1rem;
+
+    &:hover {
+      background-color: var(--c-2);
+    }
+  }
+}

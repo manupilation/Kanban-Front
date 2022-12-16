@@ -4,13 +4,23 @@ import PropTypes from "prop-types";
 
 function Provider({ children }) {
   const [token, setToken] = useState("");
-  const [userData, setUserData] = useState([]);
+  const [userData, setUserData] = useState({});
+  const [updateData, setUpdateData] = useState({
+    task: "",
+    status: "",
+    _id: ""
+  });
+  const [updating, setUpdating] = useState(false);
 
   const contextData = {
     token,
     userData,
+    updateData,
+    updating,
     setToken,
     setUserData,
+    setUpdateData,
+    setUpdating,
   };
 
   return(
@@ -22,6 +32,6 @@ function Provider({ children }) {
 
 Provider.propTypes = {
   children: PropTypes.arrayOf(PropTypes.node),
-};
+}.isRequired;
 
 export default Provider;
