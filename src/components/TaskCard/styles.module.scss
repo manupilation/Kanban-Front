@@ -1,0 +1,76 @@
+.taskCardContainer {
+  background-color: var(--c-1);
+  display: grid;
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 4px;
+  min-height: 150px;
+
+  h2 {
+    margin-top: 10px;
+    grid-row: 1;
+    color: var(--c-wg);
+    font-family: "Poppins";
+    font-size: 1rem;
+  }
+
+  .headerCard {
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+
+  .editButton {
+    background-color: white;
+    padding: 12px;
+    place-self: start end;
+    grid-column: 2;
+    display: flex;
+    cursor: pointer;
+    border-radius: 50%;
+
+    &:hover {
+      background-color: var(--c-gw);
+    }
+
+    img {
+        width: 20px;
+        height: 20px;
+    }
+  }
+
+  .dateDiv {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    p {
+      font-family: "Poppins";
+      font-weight: 600;
+
+      &:nth-child(1) {
+        padding: .1rem .6rem;
+        border-radius: 4px;
+
+      }
+
+      &:nth-child(2) {
+        color: var(--c-wg);
+      }
+    }
+    .Fazendo {
+      background-color: var(--c-py);
+    }
+
+    .Concluído {
+      background-color: var(--c-gr);
+    }
+
+    .Testando {
+      background-color: var(--c-pu);
+    }
+
+    .Pendente {
+      background-color: var(--c-rd);
+    }
+  }
+}
