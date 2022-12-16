@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./styles.module.scss";
+import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 
 function LoginPage() {
@@ -16,7 +17,7 @@ function LoginPage() {
         <LoginForm />
         <div className={styles.registerNow}>
           <p>Não tem uma conta ?</p>
-          <a>REGISTRE-SE AQUI</a>
+          <Link to="/register">REGISTRE-SE AQUI</Link>
         </div>
       </section>
     </div>

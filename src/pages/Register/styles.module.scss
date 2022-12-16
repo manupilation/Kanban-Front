@@ -1,0 +1,25 @@
+.registerSection {
+  max-width: 500px;
+  margin: auto;
+  display: grid;
+  margin-top: 100px;
+  padding: 30px;
+  background-color: var(--c-pu);
+  border-radius: 4px;
+
+  p, a {
+    text-align: center;
+    place-self: center;
+    margin-bottom: 10px;
+  }
+  a {
+    color: var(--c-1);
+    padding: .6rem 1rem;
+    background-color: var(--c-gr);
+    width: 50%;
+    border-radius: 14px;
+    font-family: "Poppins";
+    font-weight: bold;
+    font-size: 1rem;
+  }
+}
