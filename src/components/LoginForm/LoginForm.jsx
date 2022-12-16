@@ -47,14 +47,14 @@ function LoginForm() {
     return <Navigate to="/tasks"/>;
   } else {
     return (
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className={styles.formLogin}>
         <h2>LOGIN</h2>
         <TextInput
           type="text"
           value={email}
           name="email"
           labelText="Email:"
-          className={styles.emailInput}
+          className={styles.formInput}
           changeInput={handleChangeLogin}
         />
   
@@ -63,7 +63,7 @@ function LoginForm() {
           value={password}
           name="password"
           labelText="Senha:"
-          className={styles.passwordInput}
+          className={styles.formInput}
           changeInput={handleChangeLogin}
         />
   

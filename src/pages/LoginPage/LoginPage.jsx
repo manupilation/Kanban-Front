@@ -8,7 +8,7 @@ function LoginPage() {
       <section className={styles.titleSection}>
         <h1>Kanban Scheduler</h1>
         <p>
-          Aqui, você gerencia melhoras suas atividades!
+          <span className={styles.spanDetail}>Aqui</span>, você gerencia melhor <span className={styles.spanDetail}>suas</span> atividades!
         </p>
       </section>
 
