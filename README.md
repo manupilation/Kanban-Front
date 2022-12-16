@@ -1,11 +1,13 @@
 # Repositório Front-End Task Scheduler.
 
+![Página principal de Tasks](./images/TelaPrincipal.png)
+
 # Sumário
 
 - [Pré-requisitos](#pré-requisitos)
 - [Como funciona este projeto](#explicações-gerais)
 - [Como rodar o projeto](#como-rodar-o-projeto)
-  - [Rode manualmente](#manual)
+
 
   
   # Pré-requisitos
@@ -56,3 +58,15 @@ especificações.
 
 O Card contém a tarefa a ser feita, a data em que foi iniciada, seu status atual e um botão interativo. Este botão irá ativar o primeiro card como formulário
 de atualização do card clicado.
+
+     
+# Como rodar o projeto
+     
+ Para rodar o projeto, basta estar no diretório que criamos e clonamos e rodar os comandos:
+```
+npm install
+```
+     
+```
+npm run dev
+```
