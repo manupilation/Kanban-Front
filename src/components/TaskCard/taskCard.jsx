@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import styles from "./styles.module.scss";
 import UserContext from "../../context/userContext";
+import pen from "../../../images/pen.svg";
 
 function TaskCard({ task, date, status, _id }) {
   const { setUpdateData, setUpdating } = useContext(UserContext);
@@ -42,15 +43,16 @@ function TaskCard({ task, date, status, _id }) {
 
   return (
     <div className={styles.taskCardContainer}>
-      <div>
-        <div onClick={handleEditTask}>
-          <img src=""/>
-          <a>Editar</a>
+      <div className={styles.headerCard}>
+        <div onClick={handleEditTask} className={styles.editButton}>
+          <img src={pen}/>
         </div>
         <h2>{task}</h2>
       </div>
-      <p>{statusName()}</p>
-      <p>{dateFormat}</p>
+      <div className={styles.dateDiv}>
+        <p className={styles[statusName()]}>{statusName()}</p>
+        <p>{dateFormat}</p>
+      </div>
       <p hidden={true}>{_id}</p>
     </div>
   );
