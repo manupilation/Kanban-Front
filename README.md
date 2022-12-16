@@ -34,7 +34,7 @@ git@github.com:manupilation/Kanban-Front.git
 
 É importante lembrar que:
 Para rodar o front-end do Kanban, você precisa estar com o backend kanban em funcionamento na máquina, especificamente na rota 3001.
-Confira aqui o [KanbanBack](https://github.com/manupilation/Kanban-Front)
+Confira aqui o [KanbanBack](https://github.com/manupilation/Kanban-Backend).
 
 # Explicações gerais
 
